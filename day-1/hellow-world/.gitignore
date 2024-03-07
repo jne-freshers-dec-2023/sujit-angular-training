@@ -7,6 +7,10 @@
 # Only exists if Bazel was run
 /bazel-out
 
+/.browserslistrc
+/.editorconfig
+/package-lock.json
+
 # dependencies
 /node_modules
 

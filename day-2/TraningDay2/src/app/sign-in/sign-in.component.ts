@@ -30,7 +30,7 @@ export class SignInComponent implements OnInit {
   onLogin(){
     this.myForm.setErrors({
       invalidLogin:true
-    })
+    });
   }
 
 }
