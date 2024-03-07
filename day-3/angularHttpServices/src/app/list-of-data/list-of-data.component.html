@@ -1,0 +1,10 @@
+<div class="parentDiv">
+    <input ngModel name="title" #titleField ="ngModel" (keyup.enter)="postTitle(titleField)" class="inputfileld" type="text" placeholder="enter data here">
+    <ul class="ulList" *ngIf="apiResponse">
+        <li class="liList" *ngFor="let each of apiResponse"> {{ each.title}}
+            <button class="update button" (click)="onUpdate(each)"> Update </button>
+            <button class="remove button" (click)="onRemove(each.id)" > Remove </button>
+
+        </li>
+    </ul>
+</div>

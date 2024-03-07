@@ -1,0 +1,7 @@
+<div class="ulDiv">
+    <ul>
+        <li routerLinkActive="colorChange"><a routerLink="/">Home</a></li>
+        <li routerLinkActive="colorChange" ><a [routerLink]="['register',register.id]">register</a></li>
+        <li routerLinkActive="colorChange"><a routerLink="/list" [queryParams]="queryParam">List</a></li>
+    </ul>
+</div>

@@ -1,0 +1,29 @@
+.ulDiv{
+    margin-top:0px;
+}
+
+ul {
+    list-style-type: none;
+    background-color: black;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    float: left;
+    display: block;
+    padding: 10px;
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+
+/* li:hover{
+    background-color: rgb(70, 69, 69);
+} */
+
+.colorChange{
+    background-color: rgb(70, 69, 69);
+}
