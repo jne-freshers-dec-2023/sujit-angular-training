@@ -1,0 +1,12 @@
+
+<button type="button" class="btn" [ngClass]="{
+    'btn-primary': condition,
+    'btn-danger': !condition
+}" (click)="onChangeButton()">add</button>
+
+
+<div [ngStyle]="{
+    'backgroundColor': isStyle ? 'red': 'blue',
+    'height': isStyle ? '200px' : '400px',
+    'width': isStyle ? '200px' : '400px'
+}"></div>

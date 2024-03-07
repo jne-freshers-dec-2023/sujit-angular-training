@@ -1,0 +1,42 @@
+<form #mf="ngForm" (ngSubmit)="submit(mf)">
+
+    <div class="form-group">
+
+        <div *ngFor="let title of titles" class="form-group">
+            <label>
+                <input type="radio" ngModel name="title" [value]="title.type">
+                {{title.name}}
+            </label>
+        </div> <br><br>
+
+        <label for="name">Name:</label>
+        <input required minlength="8" pattern="sujit mohapatra" ngModel name="name" #name="ngModel" id="name" type="text" class="form-control" (change)="onNameChange(name)">
+        <div class="alert alert-danger" *ngIf="name.touched && !name.valid">
+            <div *ngIf="name.errors?.['minlength']">MINIMUM LENGTH SHOULD BE 8 BUT YOU HAVE ENTERED ONLY {{name.errors?.['minlength']?.actualLength}}</div>
+            <div *ngIf="name.errors?.['pattern']">PATTERN SHOULD MATCH</div>
+            <div *ngIf="name.errors?.['required']">NAME IS REQUIRED</div>
+        </div>
+    </div> <br><br>
+
+    <div class="form-group">
+        <label for="comment">Comment:</label>
+        <textarea ngModel name="comment" id="comment" cols="10" rows="10" class="form-control" (change)="onCommentChange()"></textarea>
+    </div><br><br>
+
+    <div class="form-group">
+        <label >Subscribe:  </label>
+        <input type="checkbox" ngModel name="sub">
+    </div><br><br>
+
+    <div class="form-group">
+        <label >payment method :  </label>
+        <select ngModel name="selected">
+            <option *ngFor="let method of paymentMethods" [value]="method.type">{{method.name}}</option>
+        </select>
+    </div><br><br>
+
+<p>{{mf.value | json }}</p>
+
+    <button type="submit" class="btn btn-primary" [disabled]="!mf.valid">submit</button><br>
+
+</form>
