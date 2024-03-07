@@ -1,0 +1,33 @@
+<div *ngIf ="courses.length>0; then iftrue else iffalse "></div>
+
+<ng-template #iftrue>
+    <h1>
+        course is present
+    </h1>
+</ng-template>
+<ng-template #iffalse>
+    <h1>
+        course is not present
+    </h1>
+</ng-template>
+
+
+<div [hidden]="courses.length == 0">
+    <h1>
+        course is present
+    </h1>
+</div>
+
+<div [hidden]="courses.length > 0">
+    <h1>
+        course is not present
+    </h1>
+</div>
+
+<button type="button" class="btn btn-primary" (click)="addElement()">add</button>
+<ul>
+    <li *ngFor="let course of courseDetails; index as i;even as isEven">
+      {{i}} - {{course.name}} <span *ngIf="isEven">(even)</span>
+      <button type="button" class="btn btn-+primary"  (click)="revoveElement(course)">remove</button>
+    </li>
+</ul>
