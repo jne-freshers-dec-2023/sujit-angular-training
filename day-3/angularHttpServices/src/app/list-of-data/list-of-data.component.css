@@ -1,0 +1,28 @@
+.parentDiv{
+    padding-left: 50px;
+}
+
+.inputfileld{
+    height: 30px;
+    width: 700px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.ulList{
+    list-style-type: none;
+    text-decoration-style: none;
+}
+
+.liList{
+    border: 1px solid black;
+    height: 30px;
+    width: 700px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.button{
+   background-color: rgb(93, 93, 241); 
+   color: white;
+}

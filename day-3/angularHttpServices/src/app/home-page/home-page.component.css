@@ -1,0 +1,15 @@
+.imagediv{
+    height: 70%;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.imagediv img {
+    width: 100%; /* Ensure the image takes up the entire width of the container */
+    height: 100%; /* Ensure the image takes up the entire height of the container */
+    object-fit: cover; /* Scale image to cover container while maintaining aspect ratio */
+    position: relative; /* Position image relative to its container */
+    top: 0; 
+    left: 0; /* Align image to left of container */
+}
